@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const categories = [
     {
         id: 1,
         name: "For You",
         image: "https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/all.svg",
-        link: "/for-you",
+        link: "/",
     },
     {
         id: 2,
@@ -95,21 +95,26 @@ function CategoryBar() {
         "
             >
                 {categories.map((item) => (
-                    <Link
+                    <NavLink
                         key={item.id}
                         to={item.link}
-                        className="flex flex-col items-center flex-shrink-0 hover:text-blue-600 transition"
+                        className={({ isActive }) =>
+                            `flex flex-col items-center flex-shrink-0 transition pb-2 ${isActive
+                                ? "text-blue-600 bg-gradient-to-b from-blue-100 to-white  rounded-t-md border-b-2 border-blue-600 font-semibold"
+                                : "text-gray-700 hover:text-blue-600"
+                            }`
+                        }
                     >
                         <img
                             src={item.image}
                             alt={item.name}
-                            className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                            className="w-8 h-8  md:w-10 md:h-10 object-contain"
                         />
 
                         <span className="text-[11px] md:text-sm text-center mt-2 leading-tight">
                             {item.name}
                         </span>
-                    </Link>
+                    </NavLink>
                 ))}
             </div>
         </div>

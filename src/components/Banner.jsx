@@ -38,7 +38,7 @@ function Banner() {
       {/* Left Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-1 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100"
+        className="absolute cursor-pointer left-1 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100"
       >
         <ChevronLeft size={24} />
       </button>
@@ -46,7 +46,7 @@ function Banner() {
       {/* Right Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-1 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100"
+        className="absolute cursor-pointer right-1 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-100"
       >
         <ChevronRight size={24} />
       </button>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home/pages";
-// import Fashion from "./pages/Fashion/Fashion";
+
+import ForYou from './pages/forYou/pages';
+import Fashion from "./pages/fashion/Pages";
 // import Mobiles from "./pages/Mobiles/Mobiles";
 // import Electronics from "./pages/Electronics/Electronics";
 // import Beauty from "./pages/Beauty/Beauty";
@@ -24,8 +25,8 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<Home />} />
-
+        <Route path="/" element={<ForYou />} />
+        <Route path="/fashion" element={<Fashion />} />
         {/* <Route path="/fashion" element={<Fashion />} />
 
         <Route path="/mobiles" element={<Mobiles />} />
